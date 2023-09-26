@@ -1,8 +1,3 @@
-print("ini display dokter")
-print("mari  kita buat program display")
-
-
-
 from flask import Flask, render_template
 import pandas as pd  # Untuk membaca data dari Excel
 
@@ -25,4 +20,3 @@ def tampil_jadwal_dokter():
 
 if _name_ == '_main_':
     app.run(debug=True)
-
