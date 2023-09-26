@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import pandas as pd  # Untuk membaca data dari Excel
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Fungsi untuk membaca data dokter dari file Excel
 def baca_data_dokter():
@@ -18,5 +18,5 @@ def tampil_jadwal_dokter():
     # Kirim data dokter ke template HTML
     return render_template('jadwal_dokter.html', data_dokter=data_dokter)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
