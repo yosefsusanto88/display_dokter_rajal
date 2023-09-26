@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jadwal Praktek Dokter</title>
+</head>
+<body>
+    <h1>Jadwal Praktek Dokter</h1>
+    <table border="1">
+        <tr>
+            <th>Nama Dokter</th>
+            <th>Jam Praktek</th>
+            <th>Kuota Dokter</th>
+            <th>Status</th>
+        </tr>
+        {% for dokter in data_dokter.iterrows() %}
+            <tr>
+                <td>{{ dokter[1]['Nama Dokter'] }}</td>
+                <td>{{ dokter[1]['Jam Praktek'] }}</td>
+                <td>{{ dokter[1]['Kuota Dokter'] }}</td>
+                <td>{{ dokter[1]['Status'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
